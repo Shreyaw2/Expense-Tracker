@@ -1,16 +1,86 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Expense Tracker
 
-Currently, two official plugins are available:
+A full-stack expense management application built using the MERN stack.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- User registration and login
+- JWT authentication
+- Add, edit and delete transactions
+- Income and expense tracking
+- Dashboard with financial summaries
+- Monthly income vs expense charts
+- Expense category breakdown
+- Search and filter transactions
+- MongoDB data persistence
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+**Frontend:** React, Vite, CSS, Axios, Recharts, Lucide React
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Backend:** Node.js, Express.js
+
+**Database:** MongoDB Atlas, Mongoose
+
+**Authentication:** JWT, bcryptjs
+
+## Project Structure
+
+Expense_Tracker/
+├── client/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── pages/
+│   │   └── services/
+│   └── package.json
+│
+└── server/
+    ├── config/
+    ├── middleware/
+    ├── models/
+    ├── routes/
+    ├── .env
+    └── server.js
+
+## Installation
+
+### 1. Clone repository
+
+git clone https://github.com/Shreyaw2/Expense-Tracker.git
+
+### 2. Backend setup
+
+cd Expense-Tracker/server
+npm install
+
+Create a .env file with:
+
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret
+CLIENT_URL=http://localhost:5173
+
+Start backend:
+
+npm run dev
+
+### 3. Frontend setup
+
+Open another terminal:
+
+cd Expense-Tracker/client
+npm install
+
+Create a .env file:
+
+VITE_API_URL=http://localhost:5000/api
+
+Start frontend:
+
+npm run dev
+
+## Author
+
+Shreya Wankhede
